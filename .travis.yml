@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+- 2.0.0
+install:
+- bundle install
+before_script:
+- rake db:migrate
+script:
+- rake test
