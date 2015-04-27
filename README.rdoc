@@ -1,3 +1,6 @@
+{<img src="https://travis-ci.org/forhot2000/rails-hello.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/forhot2000/rails-hello]
+{<img src="https://coveralls.io/repos/forhot2000/rails-hello/badge.svg?branch=master" alt="Coverage Status" />}[https://coveralls.io/r/forhot2000/rails-hello?branch=master]
+
 == README
 
 This README would normally document whatever steps are necessary to get the
