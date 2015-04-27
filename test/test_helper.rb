@@ -1,3 +1,6 @@
+# simplecov   https://github.com/colszowka/simplecov
+# coverage    https://coveralls.zendesk.com/hc/en-us/articles/201769485-Ruby-Rails
+
 require 'simplecov'
 require 'coveralls'
 
@@ -5,9 +8,22 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   SimpleCov::Formatter::HTMLFormatter,
   Coveralls::SimpleCov::Formatter
 ]
+
+# SimpleCov.profiles.define 'rails' do
+#   add_filter '/test/'
+#   add_filter '/config/'
+
+#   add_group 'Controllers', 'app/controllers'
+#   add_group 'Models', 'app/models'
+#   add_group 'Helpers', 'app/helpers'
+#   add_group 'Libraries', 'lib'
+# end
+
 SimpleCov.start do
   add_group "Models", "app/models"
   add_group "Controllers", "app/controllers"
+  add_group 'Helpers', 'app/helpers'
+  add_group 'Libraries', 'lib'
 end
 
 ENV["RAILS_ENV"] ||= 'test'
