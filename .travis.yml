@@ -1,9 +1,26 @@
 language: ruby
 rvm:
 - 2.0.0
+env:
+  global:
+  - MISFIT_CLOUD_BUILDER_SERVER="52.6.42.144"
+  - MISFIT_CLOUD_BUILDER_USER="misfit"
+  - MISFIT_CLOUD_BUILDER_PASSWORD="User@123"
+
 install:
 - bundle install
 before_script:
 - rake db:migrate
+- curl http://$MISFIT_CLOUD_BUILDER_SERVER/downloads/misfit-cloud-builder-client-linux-386.tar.gz | tar xzv
+
 script:
 - rake test
+- ./misfit-cloud-builder-client --travis
+
+# branches:
+#   only:
+#   - master
+#   - develop
+
+# notifications:
+#   hipchat: C5Ta9DcFxSNftnD2ZMtfRJN2SbUtRLuGDQy6JXmI@1467331
