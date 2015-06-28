@@ -24,7 +24,9 @@ deploy:
     repo: westmisfit/rails-hello
     branch: develop
 
-cache: bundler
+cache:
+  directories:
+    - vendor/bundle
 
 # branches:
 #   only:
