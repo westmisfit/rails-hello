@@ -28,3 +28,6 @@ deploy:
   bucket: misfit.sw.stg.epd-team
   upload-dir: 'westmisfit/rails-hello/${TRAVIS_BUILD_NUMBER}/'
   acl: public_read
+  on:
+    repo: westmisfit/rails-hello
+    branch: develop
