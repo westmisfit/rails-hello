@@ -9,8 +9,7 @@ env:
     - secure: "n4h8coLOFxbcYwUDPChtygZYk0Y8qY8YPUJtAtcTjTgVWkNDfeHrhvAQlRSY3ay71niD4ndakQjUvNEYdAZEq4iNsW+2rgJ+/OMNuGcW2SrHhOnQNrYWV5UX5EyGzmfNHU1GUeJFmj/VaTcIUiLuy5BIDZiFv2PmxXdMiWA1TpdPvc+UZ4Kje4J0hRjqFqpJ4P5GTfIJH2SJ67PSXXGI+WWI09cdIkhSGRk+6QPIWJjjDMwmeGF+6MtmiJUto7nskBAzARhukaxvtwxJwzRLDUF0mrjXN5OvT5mHXociFfWke6SXtGgBg/yw4DGEgc/z1jCFzGRE+07N7BENcUz8kpNhOPmaHrXzAApPfIEhlz7rsl6YTMotQfd10x812Edzxr6T+9KJ2ty9gxPqxxrIqnXvm++j5EZRIqHOEWYIGnAjPJHH/huesn0VDMvw59b6lC6rYkvjOgn/C9gdLm20iG/K5s1oFMP4kQ8t+pVxQym/9+JzvTG5z1F62Zk+HTiz8vNoLW7SpilYxJGVrkIeYx4avtQ7XLHGOsVCaadomriYMjbBduUiPJeY7hENHC3Ew8DljhDCuCFm1InXFv+T3JYs7l0N7VFg3eOVF1i8TkvGRHNBHmdUmAtwKeyY7KkNa4Ut51qBa6pKlavYRPgw/GYiAIhsZyf1xihA8+kdQZw="
 
 install:
-  - bundle install --path=${BUNDLE_PATH:-vendor/bundle}
-  - ls vendor/bundle
+  - bundle install --path=vendor/bundle
 before_script:
   - bundler exec rake db:migrate
   # - curl http://$ARES_SERVER/downloads/ares-linux-386.tar.gz | tar xzv
