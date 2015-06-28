@@ -1,24 +1,16 @@
 language: ruby
 rvm:
-- 2.0.0
+  - 2.0.0
 
 install:
-- bundle install
+  - bundle install
 before_script:
-- rake db:migrate
-# - curl http://$MISFIT_CLOUD_BUILDER_SERVER/downloads/misfit-cloud-builder-client-linux-386.tar.gz | tar xzv
+  - rake db:migrate
+  # - curl http://$MISFIT_CLOUD_BUILDER_SERVER/downloads/misfit-cloud-builder-client-linux-386.tar.gz | tar xzv
 
 script:
-- rake test
-# - ./misfit-cloud-builder-client --travis
-
-# branches:
-#   only:
-#   - master
-#   - develop
-
-# notifications:
-#   hipchat: C5Ta9DcFxSNftnD2ZMtfRJN2SbUtRLuGDQy6JXmI@1467331
+  - rake test
+  # - ./misfit-cloud-builder-client --travis
 
 deploy:
   provider: s3
@@ -31,3 +23,13 @@ deploy:
   on:
     repo: westmisfit/rails-hello
     branch: develop
+
+cache: bundler
+
+# branches:
+#   only:
+#     - master
+#     - develop
+
+# notifications:
+#   hipchat: C5Ta9DcFxSNftnD2ZMtfRJN2SbUtRLuGDQy6JXmI@1467331
