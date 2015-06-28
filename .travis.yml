@@ -12,11 +12,11 @@ install:
   - bundle install --path=${BUNDLE_PATH:-vendor/bundle}
   - ls vendor/bundle
 before_script:
-  - rake db:migrate
+  - bundler exec rake db:migrate
   # - curl http://$ARES_SERVER/downloads/ares-linux-386.tar.gz | tar xzv
 
 script:
-  - rake test
+  - bundler exec rake test
   # - ./ares
 
 # deploy:
