@@ -24,6 +24,7 @@ deploy:
   secret_access_key:
     secure: "pp5AYuCTzHlU2u0xOG5rNXFNO3H0tAhmjUPXWuM3A4WMaSOC11ZX1/R2JdMFS5kEff57uLFXXjyGl2M7pI/ojKaZoNFPLmN+D87+S8vzCWDgEXvUIWuCzCBrK2xqIhnP2A5TlC31njr6obd/6v0ll1mv2IZeGS1MauJkoKMpCiVv7VKChKBp0C5Aemw1pm5jBJ/+rUQIuQqg3J9am+gS91v4FXptedZxd6VVXdUO24SrCRHNdhtwm8wGQJkYgxj+nbp+3oeKhB1HiFf/C+KfO+89/O675a+gbVCE10Ie2UsykFEbG9tGOTSXgLbSqglMiPrgmXUmzJc02C0IXnxI4O4yBxtpVmOXIEHlFm79zQLmfv2cJyefLBGAIL5vBL3gTVebg9HLXoZkE6FbFBSC8GXRXXltixKzjlyqNFVwj4dTYhdKc7HeSopyv6fimaTJvJXNp2neHpUzY2B0+3foCg/4ZhHxlOXuC0Kd+/oTYMXgVpaBGfevO5Dy3/3CPnTNgSUQo86u/6sGxg85L4vbwcIawrzR50vlD8/vwRPOjwd2gRqEz+RE2iPgOZVEpygYapSZYJx8jYunFiDNBP7VxCGe8dZ7uIiRv5bVQJhHAkDVNRFGKGYPSk1tJbvcCfOKAlB3/MwljTomHcVljiJr5MNhDqy1rwlWYLkCG4NdnTI="
   bucket: misfit.sw.stg.epd-team
+  local-dir: "build"
   upload-dir: "test/${TRAVIS_REPO_SLUG}/${TRAVIS_BRANCH}/build_${TRAVIS_BUILD_NUMBER}"
   acl: public_read
   on:
